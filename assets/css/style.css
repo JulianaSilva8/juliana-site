@@ -1,15 +1,51 @@
 body{
-    background-color: #021a25e7;
+    background-color: #082a3ae1;
+}
+
+h1, h2 {
+    letter-spacing: 1.5px;
+}
+
+h2{
+    font-size: 40px;
+    color: #68878a;
+}
+
+.modo-escuro {
+    background-color: #0e0e0e;
+}
+
+.modo-escuro h1,
+.modo-escuro h2,
+.modo-escuro p {
+    color: #ffffff !important;
 }
 
 #juliana{
     margin-top: 30px;
 }
 
-#juliana h1{
+#juliana h1 {
     font-size: 70px;
     font-family: pacifico;
     color: #68878a;
+    animation: fadeInDown 1s ease;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+section {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 40px;
 }
 
 .foto-perfil{
@@ -19,16 +55,15 @@ body{
     margin-top: 5px;
 }
 
+.foto-perfil:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+}
 
 #sobre-mim{
     margin-top: 40px;
-    margin-bottom: 120px;
-}
-
-#sobre-mim h2{
-    font-size: 40px;
-    color: #68878a;
-
+    margin-bottom: 50px;
 }
 
 #sobre-mim p{
@@ -36,8 +71,68 @@ body{
     color: #d3e0e0;
 }
 
-
-#ling-redes h2{
-    color: #68878a;
-    font-size: 40px;
+#skills {
+    margin-top: 40px;
+    margin-bottom: 40px;
 }
+
+.skills-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Espaço entre os ícones */
+    flex-wrap: wrap; /* Icons mudam de linha se for preciso */
+    margin-top: 30px;
+}
+
+.skill-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #113750ea;
+    border-radius: 12px;
+    padding: 20px;
+    width: 110px; /* Tamanho do container */
+    height: 130px; /* Altura do container */
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+
+
+.skill-item img {
+    width: 60px; /* Largura do ícone */
+    height: 60px; /* Altura do ícone */
+    object-fit: contain;
+    margin-bottom: 10px; /* Espaço entre o ícone e o texto */
+    margin-top: 15px;
+}
+
+.skill-item p {
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.skill-item:hover {
+    background-color: #11375075;
+}
+
+#contacts {
+    margin-top: 40px;
+    margin-bottom: 50px;
+}
+
+#contacts img:hover {
+    transform: translateY(-5px) scale(1.1);
+    cursor: pointer;
+}
+
+#contacts a img {
+    border-radius: 8px;
+    padding: 5px;
+}
+
+#contacts a img:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
